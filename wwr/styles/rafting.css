@@ -1,0 +1,595 @@
+:root {
+    --primary-color: #fff;
+    --secondary-color: #f4a261;
+    --accent1-color: #264653;
+    --accent2-color: #e9c46a;
+    --heading-font: "Times New Roman", Georgia, serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    width: 840px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    align-items: center;
+    padding: 15px 0;
+}
+
+header img {
+    width: 180px;
+    height: auto;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+header nav a {
+    color: var(--accent1-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--accent2-color);
+}
+
+.hero {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(38, 70, 83, 0.85);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 2.8rem;
+    text-align: center;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ====================== HISTORY SECTION ====================== */
+.history {
+    width: 840px;
+    margin: 0 auto 60px;
+}
+
+.history h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: var(--accent1-color);
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.history-content p {
+    line-height: 1.7;
+}
+
+/* ====================== ADVENTURES SECTION ====================== */
+.adventures {
+    width: 840px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.adventures h2 {
+    margin-bottom: 30px;
+    color: var(--accent1-color);
+}
+
+.adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.adventure-grid figure {
+    margin: 0;
+}
+
+.adventure-grid img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.adventure-grid img:hover {
+    transform: scale(1.05);
+}
+
+.adventure-grid figcaption {
+    margin-top: 8px;
+    font-weight: bold;
+    color: var(--accent1-color);
+}
+
+/* ====================== FOOTER ====================== */
+footer {
+    background-color: var(--accent1-color);
+    color: white;
+    padding: 25px 0;
+    margin-top: 60px;
+}
+
+footer p {
+    margin: 0 0 15px 0;
+    font-size: 0.95rem;
+}
+
+.socialmedia {
+    display: flex;
+    justify-content: flex-end;
+    /* Moved to the right */
+    gap: 25px;
+    padding-right: 20px;
+    /* Optional: add some space from edge */
+}
+
+.socialmedia a img {
+    width: 38px;
+    height: 38px;
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.socialmedia a img:hover {
+    transform: scale(1.2);
+}
+
+/* General fixes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+    line-height: 1.6;
+}
+
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+}
+
+/* Remove default list styling */
+nav ul {
+    list-style: none;
+}
+
+/* ====================== HOME HERO ====================== */
+.home-hero {
+    position: relative;
+    height: 620px;
+    overflow: hidden;
+}
+
+.home-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 4.2rem;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.hero-subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Features Section (3 Boxes) */
+.features {
+    width: 840px;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-box {
+    text-align: center;
+    position: relative;
+}
+
+.feature-box img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.feature-box .icon {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.8rem;
+    background: rgba(255, 255, 255, 0.9);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.feature-box h3 {
+    margin-top: 15px;
+    color: var(--accent1-color);
+    font-size: 1.4rem;
+}
+
+/* Thrill Section */
+.thrill-section {
+    background-color: #e6d5b8;
+    /* Light tan/beige color like the example */
+    padding: 80px 0;
+}
+
+.thrill-grid {
+    width: 840px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.thrill-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.thrill-content {
+    background-color: #2c3e50;
+    color: white;
+    padding: 45px 40px;
+    border-radius: 12px;
+    height: fit-content;
+}
+
+.thrill-content h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2.1rem;
+}
+
+.thrill-content p {
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* CTA Button (consistent across site) */
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent2-color);
+    color: var(--accent1-color);
+    padding: 14px 34px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #f4c36a;
+    transform: translateY(-4px);
+}
+
+/* Newsletter */
+.newsletter {
+    width: 840px;
+    margin: 0 auto 60px;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    border-radius: 12px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 12px;
+    max-width: 600px;
+    margin: 20px auto 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input {
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    width: 260px;
+}
+
+.newsletter-form button {
+    padding: 12px 28px;
+    background-color: var(--accent1-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Offerings Grid */
+.offerings {
+    width: 840px;
+    margin: 0 auto 60px;
+}
+
+.offerings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    color: var(--accent1-color);
+}
+
+/* Trips Page */
+.trips-hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3.2rem;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+    background: rgba(38, 70, 83, 0.7);
+    padding: 15px 50px;
+    border-radius: 10px;
+}
+
+.trips-grid {
+    width: 840px;
+    margin: 40px auto;
+}
+
+.trips-grid h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.trip-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.trip-card img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.trip-info .level {
+    color: var(--accent2-color);
+    font-weight: bold;
+}
+
+/* Table */
+.trips-table {
+    width: 840px;
+    margin: 60px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 14px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: var(--accent1-color);
+    color: white;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+.final-cta {
+    text-align: center;
+    margin: 60px 0;
+    padding: 40px;
+    background: linear-gradient(135deg, #264653, #2a9d8f);
+    color: white;
+    border-radius: 15px;
+}
+
+/* Make sure these are also in your CSS */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+/* ====================== CONTACT PAGE ====================== */
+.contact-hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+    background: rgba(38, 70, 83, 0.75);
+    padding: 15px 60px;
+    border-radius: 12px;
+}
+
+.contact-container {
+    width: 840px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+/* Contact Form */
+.contact-form-section h2 {
+    margin-bottom: 25px;
+    color: var(--accent1-color);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--accent1-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+/* Contact Info */
+.contact-info h2 {
+    margin-bottom: 25px;
+    color: var(--accent1-color);
+}
+
+.info-item {
+    margin-bottom: 28px;
+}
+
+.info-item h3 {
+    color: var(--accent2-color);
+    margin-bottom: 8px;
+}
+
+.info-item a {
+    color: var(--accent1-color);
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+.quick-cta {
+    margin-top: 40px;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.quick-cta h3 {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
